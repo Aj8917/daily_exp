@@ -49,7 +49,7 @@ class Login extends BaseController
           //  print_r($this->validator);
             session()->setFlashdata('Error', 'Error !.');
        //   $data[$error]=$this->validator;
-          return redirect()->to('/');
+         // return redirect()->to('/');
         }
     }//auth
 }//login
