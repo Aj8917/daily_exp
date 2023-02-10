@@ -25,12 +25,19 @@
                 <div class="d-flex align-items-center mb-3 pb-1">
                   </div>
                   <form action="/verify_login" method="post"> 
-                  <?php if (session()->getFlashdata('error')) : ?>
-                  <div class="alert alert-danger alert-dismissible">
+
+                    <?php if(session()->validation)
+                          {
+                      ?>
+                   <div class="alert alert-danger alert-dismissible">
                         <button type="button" class="btn-close" data-bs-dismiss="alert">&times;</button>
-                        <?php echo session()->getFlashdata('failed') ?>
+                      <?php
+                            print_r(session()->validation->listErrors());
+                        }
+                     ?>
                     </div>
-                  <?php endif;   ?>
+                 
+                 
                 
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>

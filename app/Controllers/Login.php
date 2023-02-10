@@ -10,7 +10,7 @@ class Login extends BaseController
    public function __construct()
    {
         $model=new UsersModel();
-       
+      
    }
    
     public function index()
@@ -19,7 +19,9 @@ class Login extends BaseController
     }
     public function auth()
     {
+      
         $session= session();
+     
         //to declare the variable 
         $email=$this->request->getPost('email');
         $password=$this->request->getPost('passsword');
@@ -37,8 +39,15 @@ class Login extends BaseController
             
             $model=new UsersModel();
             $record=$model->where('user_name',$email)->first();
-            print_r($record);
+           // print_r($record);
               //if user find put in to session and redirect to dashboard
+              $data=[
+                      'id'=>$record->user_id,
+                      'username'=>$record->user_name
+
+              ];
+              $session->set($data);
+              return redirect()->to('/dashboard');
             if($record)
             {
                 echo "record foound ";
@@ -47,9 +56,10 @@ class Login extends BaseController
             }
         }else{
           //  print_r($this->validator);
-            session()->setFlashdata('Error', 'Error !.');
-       //   $data[$error]=$this->validator;
-         // return redirect()->to('/');
+          $session->setFlashdata('Error', 'Error !.');
+          $session->set('validation',$this->validator);
+
+           return redirect()->to('/');
         }
     }//auth
 }//login
