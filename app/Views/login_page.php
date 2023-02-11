@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<section class="vh-100" style="background-color: #9A616D;">
-    <div class="container py-5 h-100">
+<section class="vh-100" style="background-color: #9A616D; ">
+    <div class="container py-5 h-100" style="width: 50%; height: 50% margin:50px">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">
           <div class="card" style="border-radius: 1rem;">
@@ -36,7 +36,12 @@
                         }
                      ?>
                     </div>
-                 
+                  <?php if(session()->getFlashdata('Error')) {?>
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert">&times;</button>
+                        <?php echo session()->getFlashdata('Error');?>
+                        </div>
+                   <?php }?> 
                  
                 
                     <div class="d-flex align-items-center mb-3 pb-1">

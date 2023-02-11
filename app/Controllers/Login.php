@@ -39,20 +39,25 @@ class Login extends BaseController
             
             $model=new UsersModel();
             $record=$model->where('user_name',$email)->first();
-           // print_r($record);
+        
+            // echo $record['user_id'];
+            // print_r($record);
+            // exit();
               //if user find put in to session and redirect to dashboard
+            if($record)
+            {
               $data=[
-                      'id'=>$record->user_id,
-                      'username'=>$record->user_name
+                      'id'=>$record['user_id'],
+                      'username'=>$record['user_name']
 
               ];
               $session->set($data);
               return redirect()->to('/dashboard');
-            if($record)
-            {
-                echo "record foound ";
+            
+               
             }else{
-                echo "redirection to login";
+                $session->setFlashdata('Error', 'No entry found !.');
+                 return redirect()->to('/');
             }
         }else{
           //  print_r($this->validator);
