@@ -8,7 +8,7 @@ class ExpencesModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'expences';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'item_id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';

@@ -40,3 +40,269 @@ Stack trace:
 #9 C:\xampp\htdocs\daily_expences\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
 #10 C:\xampp\htdocs\daily_expences\spark(97): CodeIgniter\CLI\Console->run()
 #11 {main}
+CRITICAL - 2023-02-13 13:08:44 --> Class "App\Controllers\ExpencesModel" not found
+in APPPATH\Controllers\Expences.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:09:20 --> Class "App\Model\ExpencesModel" not found
+in APPPATH\Controllers\Expences.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:09:59 --> Class "App\Model\ExpencesModel" not found
+in APPPATH\Controllers\Expences.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:10:30 --> Call to undefined method App\Models\ExpencesModel::find_all
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Expences.php(13): CodeIgniter\Model->__call('find_all', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:10:51 --> Call to undefined method App\Models\ExpencesModel::find_all()
+in APPPATH\Controllers\Expences.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:11:51 --> Call to undefined method App\Models\ExpencesModel::order_by
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Expences.php(13): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:12:35 --> Call to undefined method App\Models\ExpencesModel::order_by
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Expences.php(13): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:13:24 --> Call to undefined method App\Models\ExpencesModel::order_by
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Expences.php(13): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:14:09 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Expences.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Expences.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Expences')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Expences')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Expences', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:16:10 --> Undefined array key "item_name"
+in APPPATH\Controllers\Expences.php on line 14.
+ 1 APPPATH\Controllers\Expences.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'APPPATH\\Controllers\\Expences.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:16:54 --> Object of class App\Models\ExpencesModel could not be converted to string
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:17:31 --> Cannot use object of type App\Models\ExpencesModel as array
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:18:17 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 APPPATH\Controllers\Expences.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Expences.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:18:35 --> Cannot use object of type App\Models\ExpencesModel as array
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:19:38 --> Cannot use object of type App\Models\ExpencesModel as array
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:21:27 --> Attempt to read property "price" on array
+in APPPATH\Controllers\Expences.php on line 15.
+ 1 APPPATH\Controllers\Expences.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "price" on array', 'APPPATH\\Controllers\\Expences.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:21:40 --> Attempt to read property "item_name" on array
+in APPPATH\Controllers\Expences.php on line 15.
+ 1 APPPATH\Controllers\Expences.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "item_name" on array', 'APPPATH\\Controllers\\Expences.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:21:57 --> Undefined variable $data
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 APPPATH\Controllers\Expences.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Expences.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:22:41 --> Call to undefined method App\Models\ExpencesModel::find_all
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Expences.php(14): CodeIgniter\Model->__call('find_all', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:23:40 --> Undefined array key "item_name"
+in APPPATH\Controllers\Expences.php on line 15.
+ 1 APPPATH\Controllers\Expences.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'APPPATH\\Controllers\\Expences.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 13:23:57 --> Undefined variable $data
+in APPPATH\Controllers\Expences.php on line 16.
+ 1 APPPATH\Controllers\Expences.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Expences.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:14:47 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:14:59 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:17:16 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:37:50 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:39:21 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:40:03 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:40:13 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:40:27 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:40:41 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:42:23 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:42:25 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:44:02 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 14:44:24 --> CodeIgniter\BaseModel::delete(): Argument #2 ($purge) must be of type bool, array given, called in C:\xampp\htdocs\daily_expences\app\Controllers\Expences.php on line 37
+in SYSTEMPATH\BaseModel.php on line 1042.
+ 1 APPPATH\Controllers\Expences.php(37): CodeIgniter\BaseModel->delete('item_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expences->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expences))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -34,6 +34,8 @@ $routes->get('/','Login::index');
 $routes->post('/verify_login','Login::auth');
 $routes->get('/dashboard','Dashboard::index');
 $routes->get('/daily_expences','Expences::index');
+//$routes->post('/delete/(:num)','Expences::delete');
+$routes->post('/delete','Expences::delete');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
