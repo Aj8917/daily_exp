@@ -62,6 +62,7 @@
 
             </div>
             <!-- End of Main Content -->
+            <?php  echo $footer; ?>
          <script type="text/javascript" >
             $(document).ready(function () {
                     $('#dataTable').DataTable();

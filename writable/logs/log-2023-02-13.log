@@ -26,3 +26,17 @@ Stack trace:
 #9 C:\xampp\htdocs\daily_expences\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
 #10 C:\xampp\htdocs\daily_expences\spark(97): CodeIgniter\CLI\Console->run()
 #11 {main}
+ERROR - 2023-02-13 12:34:32 --> mysqli_sql_exception: Duplicate column name 'price' in C:\xampp\htdocs\daily_expences\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\daily_expences\system\Database\MySQLi\Connection.php(295): mysqli->query('ALTER TABLE `ex...', 0)
+#1 C:\xampp\htdocs\daily_expences\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `ex...')
+#2 C:\xampp\htdocs\daily_expences\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `ex...')
+#3 C:\xampp\htdocs\daily_expences\system\Database\Forge.php(745): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `ex...')
+#4 C:\xampp\htdocs\daily_expences\app\Database\Migrations\2023-02-13-121343_AlterExpences.php(12): CodeIgniter\Database\Forge->addColumn('expences', Array)
+#5 C:\xampp\htdocs\daily_expences\system\Database\MigrationRunner.php(877): App\Database\Migrations\AlterExpences->up()
+#6 C:\xampp\htdocs\daily_expences\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\daily_expences\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\daily_expences\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\daily_expences\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\daily_expences\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
