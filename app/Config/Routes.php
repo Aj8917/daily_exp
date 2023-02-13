@@ -33,6 +33,7 @@ $routes->set404Override();
 $routes->get('/','Login::index');
 $routes->post('/verify_login','Login::auth');
 $routes->get('/dashboard','Dashboard::index');
+$routes->get('/daily_expences','Expences::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
