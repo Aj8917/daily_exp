@@ -21,6 +21,13 @@
                     <h1 class="h3 mb-2 text-gray-800">Report of Expences</h1>
                     <p class="mb-4">Report of Expences .</p>
 
+                    <a href="<?php echo base_url('add_expence')?>" class="btn btn-warning btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                        <span class="text">Add Expences</span>
+                    </a>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -81,8 +88,10 @@
       data: { id: id },
      // dataType: 'json',
       success: function(data) {
-        // location.reload();
+        //
         alert(data);
+        location.reload();
+        $('#dataTable').DataTable().ajax.reload();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         if (jqXHR.status === 0) {

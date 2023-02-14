@@ -27,9 +27,48 @@ class Expences extends BaseController
 
         return view('daily_expences',$data);
     }//index 
+
+    public function add_expences()
+    {
+        $data['header']=view('header/header');
+        $data['topbar']=view('header/topbar');
+        $data['sidebar']=view('header/sidebar');
+        $data['footer']=view('header/footer');
+
+        return view('add_expences',$data);   
+    }//add_expences
+
+    public function save()
+    {
+      //  session()->remove('validation');
+        $data=$this->request->getPost();
+        $rules=[
+                    'item_name'=>'required',
+                    'price' =>'required|numeric'
+
+        ];
+
+        
+        if($this->validate($rules))
+        { 
+            $expences=new ExpencesModel();
+            
+            $expences->save($data);
+           
+            SESSION()->setflashdata('success','item Saved!');
+            return redirect()->to('/add_expence');
+        }else{
+            //die('inside'); 
+            SESSION()->setFlashdata('validation',$this->validator->listErrors());
+            return  redirect()->to('/add_expence');
+
+        }
+      return  redirect()->to('/add_expence');
+        //print_r($this->request->getPost());
+    }
     public function delete()
     {
-       $id = $this->request->getPost('item_id');
+       $id = $this->request->getPost('id');
     
        if ($id) 
        {
@@ -38,6 +77,8 @@ class Expences extends BaseController
         $builder->where('item_id', $id);
         $deleted = $builder->delete();
          echo "success";
+       }else{
+        echo "No id Found";
        }
     }
 

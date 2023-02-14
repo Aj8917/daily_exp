@@ -1,0 +1,7 @@
+__ci_last_regenerate|i:1676372554;_ci_previous_url|s:26:"http://localhost:8080/save";validation|s:150:"	<div class="errors" role="alert">
+		<ul>
+					<li>The item_name field is required.</li>
+					<li>The price field is required.</li>
+				</ul>
+	</div>
+";__ci_vars|a:1:{s:10:"validation";s:3:"new";}

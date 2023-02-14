@@ -36,6 +36,9 @@ $routes->get('/dashboard','Dashboard::index');
 $routes->get('/daily_expences','Expences::index');
 //$routes->post('/delete/(:num)','Expences::delete');
 $routes->post('/delete','Expences::delete');
+$routes->get('/add_expence','Expences::add_expences');
+$routes->post('/save','Expences::save');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
