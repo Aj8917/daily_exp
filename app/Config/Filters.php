@@ -8,6 +8,7 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use CodeIgniter\HTTP\RequestInterface;
 
 class Filters extends BaseConfig
 {
@@ -21,6 +22,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'authGuard' => \App\Filters\AuthGuard::class,
     ];
 
     /**
@@ -30,7 +32,7 @@ class Filters extends BaseConfig
     public array $globals = [
         'before' => [
             // 'honeypot',
-            // 'csrf',
+             'csrf',
             // 'invalidchars',
         ],
         'after' => [
@@ -61,4 +63,15 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [];
+
+    public function isLoggedIn(RequestInterface $request ,array $argument=NULL)
+    {
+        $session= session();
+
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('/login')->send();
+            exit;
+        }
+    }
+
 }

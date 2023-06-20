@@ -40,11 +40,13 @@ class Expences extends BaseController
 
     public function save()
     {
+
       //  session()->remove('validation');
         $data=$this->request->getPost();
         $rules=[
                     'item_name'=>'required',
-                    'price' =>'required|numeric'
+                    'price' =>'required|numeric',
+                   // 'csrf_token'  =>'verify_csrf'
 
         ];
 
@@ -68,18 +70,40 @@ class Expences extends BaseController
     }
     public function delete()
     {
+        
+       
+       
        $id = $this->request->getPost('id');
-    
-       if ($id) 
+    //   echo $id;
+       if($id) 
        {
         $db = \Config\Database::connect();
         $builder = $db->table('expences');
         $builder->where('item_id', $id);
         $deleted = $builder->delete();
-         echo "success";
+         echo "Item Removed";
        }else{
         echo "No id Found";
        }
+    }
+
+    public function delete_tst()
+    {
+        echo "in";
+        // $data=$this->request->getPost();
+        // print_r($data);
+    //    $id = $this->request->getPost('id');
+    //   echo $id;
+    //    if($id) 
+    //    {
+    //     $db = \Config\Database::connect();
+    //     $builder = $db->table('expences');
+    //     $builder->where('item_id', $id);
+    //     $deleted = $builder->delete();
+    //      echo "success";
+    //    }else{
+    //     echo "No id Found";
+    //    }
     }
 
 }//class

@@ -27,7 +27,7 @@
                                 <h1 class="h4 text-gray-900 mb-4"> Expences!</h1>
                             </div>
                             <form class="user" action="<?php echo base_url('save')?>" method="post">
-
+                             <?php echo csrf_field()?>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                 <?php if(session()->getFlashdata('validation')){ ?>
@@ -80,14 +80,16 @@
 
             function delete_item(id) {
    $.ajax({
-      url: '/delete',
-      type: 'POST',
-      data: { id: id },
+      url: 'delete_tst',
+      type: 'get',
+      //data: { id: id,<?= csrf_token() ?>: '<?= csrf_hash() ?>' },
+
      // dataType: 'json',
+     
       success: function(data) {
         //
-        alert(data);
-        location.reload();
+       alert(data);
+        //location.reload();
         $('#dataTable').DataTable().ajax.reload();
       },
       error: function(jqXHR, textStatus, errorThrown) {

@@ -1,6 +1,7 @@
 <?php
 
 namespace Config;
+use App\Filters\isLoggedIn;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -30,15 +31,23 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 //$routes->get('/', 'Home::index');
-$routes->get('/','Login::index');
-$routes->post('/verify_login','Login::auth');
-$routes->get('/dashboard','Dashboard::index');
-$routes->get('/daily_expences','Expences::index');
-//$routes->post('/delete/(:num)','Expences::delete');
-$routes->post('/delete','Expences::delete');
-$routes->get('/add_expence','Expences::add_expences');
-$routes->post('/save','Expences::save');
+$routes->get('/', 'Login::index');
+$routes->post('/verify_login', 'Login::auth');
 
+
+
+
+$routes->group('', ['filter' => 'authGuard'], function ($routes) {
+    $routes->get('/dashboard', 'Dashboard::index');
+    $routes->get('/daily_expences', 'Expences::index');
+    //$routes->post('/delete/(:num)','Expences::delete');
+    $routes->post('/delete', 'Expences::delete');
+    $routes->get('/add_expence', 'Expences::add_expences');
+    $routes->post('/save', 'Expences::save');
+    $routes->get('/logout', 'Login::logout');
+
+
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

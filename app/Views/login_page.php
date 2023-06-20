@@ -25,7 +25,7 @@
                 <div class="d-flex align-items-center mb-3 pb-1">
                   </div>
                   <form action="/verify_login" method="post"> 
-
+                    <?= csrf_field() ?>
                     <?php if(session()->validation)
                           {
                       ?>

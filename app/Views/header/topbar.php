@@ -5,7 +5,7 @@
 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
     <i class="fa fa-bars"></i>
 </button>
-
+<?php /* 
 <!-- Topbar Search -->
 <form
     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -18,14 +18,15 @@
             </button>
         </div>
     </div>
-</form>
+</form> 
+*/?>
 
 <!-- Topbar Navbar -->
 <ul class="navbar-nav ml-auto">
 
     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
     <li class="nav-item dropdown no-arrow d-sm-none">
-        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+    <?php /* <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-search fa-fw"></i>
         </a>
@@ -43,8 +44,8 @@
                         </button>
                     </div>
                 </div>
-            </form>
-        </div>
+            </form> 
+        </div>  */?>
     </li>
 
     <!-- Nav Item - Alerts -->
@@ -163,14 +164,14 @@
             <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
         </div>
     </li>
-
+     
     <div class="topbar-divider d-none d-sm-block"></div>
 
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo session()->get('username') ;?></span>
             <img class="img-profile rounded-circle"
                 src="img/undraw_profile.svg">
         </a>
@@ -190,7 +191,7 @@
                 Activity Log
             </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+            <a class="dropdown-item" href="<?php echo base_url('logout')?>" >
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                 Logout
             </a>

@@ -1,0 +1,6 @@
+__ci_last_regenerate|i:1686223987;_ci_previous_url|s:33:"http://localhost:8080/add_expence";id|s:1:"1";username|s:13:"test@test.com";validation|s:117:"	<div class="errors" role="alert">
+		<ul>
+					<li>The price field must contain only numbers.</li>
+				</ul>
+	</div>
+";__ci_vars|a:1:{s:10:"validation";s:3:"old";}
