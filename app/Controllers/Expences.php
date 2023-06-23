@@ -4,106 +4,121 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ExpencesModel;
+
 class Expences extends BaseController
 {
     public function index()
     {
-        $expence=new ExpencesModel();
+        $expence = new ExpencesModel();
 
-        $data['result']=$expence->find();//tofind all record pass it without argumane
-       
-    //  //  echo $result['item_name'];
-    //    foreach($result as $row)
-    //     {
-    //         echo $row['item_name'];
-    //     }  die();
-        
-        
-       
-        $data['header']=view('header/header');
-        $data['topbar']=view('header/topbar');
-        $data['sidebar']=view('header/sidebar');
-        $data['footer']=view('header/footer');
+        $data['result'] = $expence->find(); //tofind all record pass it without argumane
 
-        return view('daily_expences',$data);
-    }//index 
+        //  //  echo $result['item_name'];
+        //    foreach($result as $row)
+        //     {
+        //         echo $row['item_name'];
+        //     }  die();
+
+
+
+        $data['header'] = view('header/header');
+        $data['topbar'] = view('header/topbar');
+        $data['sidebar'] = view('header/sidebar');
+        $data['footer'] = view('header/footer');
+
+        return view('daily_expences', $data);
+    } //index 
 
     public function add_expences()
     {
-        $data['header']=view('header/header');
-        $data['topbar']=view('header/topbar');
-        $data['sidebar']=view('header/sidebar');
-        $data['footer']=view('header/footer');
+        $data['header'] = view('header/header');
+        $data['topbar'] = view('header/topbar');
+        $data['sidebar'] = view('header/sidebar');
+        $data['footer'] = view('header/footer');
 
-        return view('add_expences',$data);   
-    }//add_expences
+        return view('add_expences', $data);
+    } //add_expences
 
     public function save()
     {
 
-      //  session()->remove('validation');
-        $data=$this->request->getPost();
-        $rules=[
-                    'item_name'=>'required',
-                    'price' =>'required|numeric',
-                   // 'csrf_token'  =>'verify_csrf'
+        //  session()->remove('validation');
+        $data = $this->request->getPost();
+        $rules = [
+            'item_name' => 'required',
+            'price' => 'required|numeric',
+            // 'csrf_token'  =>'verify_csrf'
 
         ];
 
-        
-        if($this->validate($rules))
-        { 
-            $expences=new ExpencesModel();
-            
+
+        if ($this->validate($rules)) {
+            $expences = new ExpencesModel();
+
             $expences->save($data);
-           
-            SESSION()->setflashdata('success','item Saved!');
+
+            SESSION()->setflashdata('success', 'item Saved!');
             return redirect()->to('/add_expence');
-        }else{
+        } else {
             //die('inside'); 
-            SESSION()->setFlashdata('validation',$this->validator->listErrors());
-            return  redirect()->to('/add_expence');
+            SESSION()->setFlashdata('validation', $this->validator->listErrors());
+            return redirect()->to('/add_expence');
 
         }
-      return  redirect()->to('/add_expence');
+        return redirect()->to('/add_expence');
         //print_r($this->request->getPost());
     }
     public function delete()
     {
-        
-       
-       
-       $id = $this->request->getPost('id');
-    //   echo $id;
-       if($id) 
-       {
-        $db = \Config\Database::connect();
-        $builder = $db->table('expences');
-        $builder->where('item_id', $id);
-        $deleted = $builder->delete();
-         echo "Item Removed";
-       }else{
-        echo "No id Found";
-       }
+        $id = $this->request->getPost('id');
+
+        if ($id) {
+            $db = \Config\Database::connect();
+            $builder = $db->table('expences');
+            $builder->where('item_id', $id);
+            $deleted = $builder->delete();
+            echo "Item Removed";
+        } else {
+            echo "No id Found";
+        }
     }
 
-    public function delete_tst()
+    public function load_report_view()
     {
-        echo "in";
-        // $data=$this->request->getPost();
-        // print_r($data);
-    //    $id = $this->request->getPost('id');
-    //   echo $id;
-    //    if($id) 
-    //    {
-    //     $db = \Config\Database::connect();
-    //     $builder = $db->table('expences');
-    //     $builder->where('item_id', $id);
-    //     $deleted = $builder->delete();
-    //      echo "success";
-    //    }else{
-    //     echo "No id Found";
-    //    }
-    }
+        $data['header'] = view('header/header');
+        $data['topbar'] = view('header/topbar');
+        $data['sidebar'] = view('header/sidebar');
+        $data['footer'] = view('header/footer');
 
-}//class
+        return view('report_view', $data);
+    } //load_report_view
+
+    public function search_items()
+    {
+        $data = $this->request->getPost();
+        
+        $rule = [
+            'start_date' => 'required|date',
+            'end_date' => 'required|date'
+        ];
+
+
+        if ($this->validate($rule)) {
+            $expence_model = new ExpencesModel();
+            $records = $expence_model->load_master_data($data['start_date'], $data['end_date']);
+
+            $data['header'] = view('header/header');
+            $data['topbar'] = view('header/topbar');
+            $data['sidebar'] = view('header/sidebar');
+            $data['footer'] = view('header/footer');
+            $data['records'] = $records; // Pass the fetched records to the view
+
+            return view('expence_report', $data);
+        } else {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->to('/expences-report');
+        }
+    } //search_items
+
+
+} //class

@@ -15,7 +15,14 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
+$routes->set404Override(function(){
+    $data['header'] = view('header/header');
+        $data['topbar'] = view('header/topbar');
+        $data['sidebar'] = view('header/sidebar');
+        $data['footer'] = view('header/footer');
+
+        return view('errors/html/page_not_found', $data);
+});
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -45,8 +52,14 @@ $routes->group('', ['filter' => 'authGuard'], function ($routes) {
     $routes->get('/add_expence', 'Expences::add_expences');
     $routes->post('/save', 'Expences::save');
     $routes->get('/logout', 'Login::logout');
+   
+});
 
-
+//---------------  Report -------------------------------
+$routes->group('',['filter'=>'authGuard'],function($routes){
+   
+    $routes->get('/expences-report','Expences::load_report_view');
+    $routes->post('/search-items','Expences::search_items');
 });
 /*
  * --------------------------------------------------------------------

@@ -39,4 +39,14 @@ class ExpencesModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+
+    public function load_master_data($start_date,$end_date)
+    {
+       return  $this->where('InsertDate >=', $start_date)
+                    ->where('InsertDate <=', $end_date)
+                    ->orderBy('InsertDate','Desc')
+                    ->findAll();
+    }
 }

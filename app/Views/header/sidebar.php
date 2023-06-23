@@ -38,7 +38,8 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Details:</h6>
             <!--<a class="collapse-item" href="<?php echo base_url('add_expences')?>">Add Expences</a>-->
-            <a class="collapse-item" href="<?php echo base_url('daily_expences')?>">Reports</a>
+            <a class="collapse-item" href="<?php echo base_url('daily_expences')?>">Master Expences </a>
+            <a class="collapse-item" href="<?php echo base_url('expences-report')?>">Report</a>
         </div>
     </div>
 </li>
@@ -70,7 +71,7 @@
     Addons
 </div>
 -->
-<!-- Nav Item - Pages Collapse Menu
+<!-- Nav Item - Pages Collapse Menu 
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
         aria-expanded="true" aria-controls="collapsePages">
@@ -90,7 +91,7 @@
         </div>
     </div>
 </li>
- -->
+ 
 <!-- Nav Item - Charts 
 <li class="nav-item">
     <a class="nav-link" href="charts.html">

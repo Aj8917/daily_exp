@@ -41,4 +41,14 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
+
+    public array $errors=[
+        'start_date' => [
+            'required'      => 'The Start Date field is required.',
+        ],
+        'end_date' => [
+            'required'      => 'The End Date field is required.',
+        ],
+    ];
 }

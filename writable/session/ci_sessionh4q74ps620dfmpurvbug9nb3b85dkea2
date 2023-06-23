@@ -1,0 +1,7 @@
+__ci_last_regenerate|i:1687519529;token|s:32:"1ac30849f8494008fefc9193599f4631";_ci_previous_url|s:37:"http://localhost:8080/expences-report";id|s:1:"1";username|s:13:"test@test.com";isLoggedIn|b:1;error|s:154:"	<div class="errors" role="alert">
+		<ul>
+					<li>The start date field is required.</li>
+					<li>The end date field is required.</li>
+				</ul>
+	</div>
+";__ci_vars|a:1:{s:5:"error";s:3:"old";}
