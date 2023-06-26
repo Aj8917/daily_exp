@@ -42,11 +42,14 @@ class ExpencesModel extends Model
 
 
 
-    public function load_master_data($start_date,$end_date)
+    public function load_master_data($start_date, $end_date)
     {
-       return  $this->where('InsertDate >=', $start_date)
-                    ->where('InsertDate <=', $end_date)
-                    ->orderBy('InsertDate','Desc')
-                    ->findAll();
+      
+        return 
+            $this->where('InsertDate >', date('Y-m-d', strtotime($start_date)))
+            ->where('InsertDate <', date('Y-m-d', strtotime($end_date)))
+            ->orderBy('InsertDate', 'ASC')
+            ->findAll();
     }
+    
 }

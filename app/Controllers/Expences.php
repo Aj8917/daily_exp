@@ -96,24 +96,33 @@ class Expences extends BaseController
     public function search_items()
     {
         $data = $this->request->getPost();
-        
+
         $rule = [
             'start_date' => 'required|date',
             'end_date' => 'required|date'
         ];
-
+        // print_r($data['start_date']);die();
 
         if ($this->validate($rule)) {
             $expence_model = new ExpencesModel();
             $records = $expence_model->load_master_data($data['start_date'], $data['end_date']);
 
+
+            //print_r($records);die();
             $data['header'] = view('header/header');
             $data['topbar'] = view('header/topbar');
             $data['sidebar'] = view('header/sidebar');
             $data['footer'] = view('header/footer');
             $data['records'] = $records; // Pass the fetched records to the view
+            if(empty($records))
+            {
+                session()->setFlashdata('error','No Data Found FOr selected range.');
+                return redirect()->to('/expences-report');
 
-            return view('expence_report', $data);
+            }else{
+                return view('expence_report', $data);
+            }
+           
         } else {
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->to('/expences-report');
